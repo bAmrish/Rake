@@ -1,0 +1,15 @@
+*~
+*.tmp
+*.bak
+*.class
+*.iml
+*.ipr
+*.iws
+*.log
+*.orig
+out/
+target/
+.idea
+/web-app/affisuite/
+#*
+.#*
