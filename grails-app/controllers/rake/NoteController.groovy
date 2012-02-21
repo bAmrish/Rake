@@ -1,6 +1,7 @@
 package rake
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.JSON
 
 class NoteController {
 
@@ -12,7 +13,8 @@ class NoteController {
 
     def list() {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        [noteInstanceList: Note.list(params), noteInstanceTotal: Note.count()]
+        render Note.list(params) as JSON
+//        [noteInstanceList: Note.list(params), noteInstanceTotal: Note.count()] as JSON
     }
 
     def create() {
