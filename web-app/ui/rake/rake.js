@@ -77,8 +77,15 @@
             throw {message: "Unable to start loading of Rake application. Not all thirdparty scripts loaded."}
         }
 
-        console.log("All the scripts are loaded");
-        //start loading rake
+        //Setup base url for require to load the rest of the scripts.
+        require.config({
+                baseUrl: w.baseRakeURL
+        });
+
+        require(['rake/core'], function(){
+            testRakeLoaded();
+        });
+
     }
 
     /**
@@ -120,6 +127,18 @@
             console.error("Backbone Library not Loaded");
         }
 
+        return false;
+    }
+
+    /**
+     * This function will test if the Rake application has loaded successfully
+     */
+    function testRakeLoaded(){
+        if(Rake){
+            return true;
+        }
+
+        console.log("Rake not loaded");
         return false;
     }
 
