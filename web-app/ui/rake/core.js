@@ -1,8 +1,3 @@
-define([], function(){
-
-    if(!window.Rake){
-        window.Rake = {};
-    }
-
-    return window.Rake;
+define(['rake/base', 'rake/model/note'], function(Rake){
+    console.log("base loaded!!");
 });
