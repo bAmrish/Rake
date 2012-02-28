@@ -41,3 +41,25 @@ body {
     text-decoration: none;
     color: #000;
 }
+
+.rake-note-container {
+    position: absolute;
+    min-width: 100px;
+    border: 1px solid white;
+    min-height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #999;
+    background-color: #9797f1;
+    color: black;
+}
+
+.rake-note-title{
+    border-bottom:  1px solid #fff;
+    overflow-y: hidden;
+    padding: 5px;
+}
+
+.rake-note-content{
+    padding: 5px;
+}

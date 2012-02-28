@@ -6,6 +6,7 @@
     //We need to load these thridparty scripts in the order they are listed.
     var thirdPartyScripts = ['thirdparty/require.js'
         , 'thirdparty/jquery-1.7.1.js'
+        , 'thirdparty/jquery-ui-min.js'
         , 'thirdparty/underscore.js'
         , 'thirdparty/backbone.js'
     ];
