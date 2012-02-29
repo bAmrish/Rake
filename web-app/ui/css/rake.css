@@ -52,6 +52,7 @@ body {
     box-shadow: 1px 1px 3px #999;
     background-color: #9797f1;
     color: black;
+    display: inline-block;
 }
 
 .rake-note-title{

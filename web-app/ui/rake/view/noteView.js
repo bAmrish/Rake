@@ -2,9 +2,9 @@ define(['rake/model/note'], function(Note){
     Rake.NoteView = Backbone.View.extend({
         tagname : "div",
 
-        className: "rake-note",
+        className: "rake-note-container",
 
-        template: _.template('<div id=<%=id%> class="rake-note-container"><div class="rake-note-title"><%=title%></a></div><div class="rake-note-content"><%=content%></div></div>'),
+        template: _.template('<div class="rake-note-title"><%=title%></a></div><div class="rake-note-content"><%=content%></div>'),
 
         initialize : function(){
             if(!this.model){
@@ -13,8 +13,8 @@ define(['rake/model/note'], function(Note){
         },
 
         render: function() {
-          this.$el.html(this.template(this.model.toJSON())).draggable();
-
+          this.$el.html(this.template(this.model)).draggable();
+          alert(this.id);
           return this;
         }
 
