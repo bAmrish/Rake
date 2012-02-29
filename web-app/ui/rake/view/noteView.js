@@ -14,7 +14,6 @@ define(['rake/model/note'], function(Note){
 
         render: function() {
           this.$el.html(this.template(this.model)).draggable();
-          alert(this.id);
           return this;
         }
 

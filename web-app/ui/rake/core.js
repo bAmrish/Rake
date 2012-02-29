@@ -8,7 +8,6 @@ define(['rake/base', 'rake/model/note', 'rake/view/noteView'], function(Rake){
     $.ajax("/rake/note/list", {
         success: function(data){
             $.each(data, function(index, note){
-                console.log(note);
                 var n = new Rake.NoteView({model: note});
                 $('#content').append(n.render().el);
             });
